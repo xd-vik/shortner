@@ -1,0 +1,23 @@
+{
+  "name": "shortner",
+  "version": "1.0.0",
+  "description": "Link shortner ",
+  "main": "app.js",
+  "scripts": {
+    "tailwind:css": "postcss public/styles/tail.css -o public/styles/style.css"
+  },
+  "author": "vik",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.2",
+    "postcss-cli": "^11.0.0",
+    "shortid": "^2.2.16"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3"
+  }
+}

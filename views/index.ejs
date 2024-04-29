@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Link Shortner</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+
+    <div class="w-full p-5 text-white min-h-screen bg-zinc-600">
+      <h1 class=" text-5xl tracking-tighter text-center p-2 m-4">Link Shortner 🔗</h1>
+       
+      <div class=" items-center min-h-full w-full flex flex-col ">
+        <div class="box gap flex flex-col gap-4 p-3 md:w-2/4">
+
+        <h3 class="font-mono text-xl text-center m-3 "> This is a free tool that shorten your longer links :) </h3>
+
+            <form action="/long" method="post" >
+                <div class="relative">
+                <input
+                    type="search"
+                    id="search"
+                    class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Enter a link to shorten it ... " name="longlink"
+                    required
+                />
+                <button
+                    type="submit"
+                    class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                    Shorten URL
+                </button>
+                
+                </div>
+            </form>
+
+    </div>
+    <div class="bg-blue-400 text-white border-none rounded-md  flex flex-col m-3 w-3/4 md:w-2/5 px-10">
+      <% if(shortUrl) { %>
+        <p class="m-1 p-3 flex gap-3 flex-col md:flex-row ">Short Url : <a class="underline" href="locahost:3000/<%= shortUrl %>" target="_blank">
+          locahost:3000/<%= shortUrl %>
+        </a>
+        <button id="btn" class="m-2 md:m-1 md:ml-4 px-4 py-1 w-28 bg-blue-500 border-none rounded-md" onclick="copy(`<%= shortUrl %>`)">Copy</button>
+            
+         </p> <%} %>
+         </div>
+    </div>
+      </div>
+
+    
+    </div>
+    <script>
+      function copy(shortUrl) {
+        const link = "localhost:3000/"+shortUrl;
+        navigator.clipboard.writeText(link);
+        document.getElementById("btn").innerHTML = "Copied ✅";  
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+djt3m66Xqc3ElA8m
+
+mongodb+srv://vikdev:<password>@shortner.tsdvhkk.mongodb.net/?retryWrites=true&w=majority&appName=shortner
+
+
+mongodb+srv://vikdev:djt3m66Xqc3ElA8m@shortner.tsdvhkk.mongodb.net/
