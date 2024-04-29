@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Link Shortner</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/styles/style.css" />
   </head>
   <body>
@@ -38,7 +39,7 @@
     </div>
     <div class="bg-blue-400 text-white border-none rounded-md  flex flex-col m-3 w-3/4 md:w-2/5 px-10">
       <% if(shortUrl) { %>
-        <p class="m-1 p-3 flex gap-3 flex-col md:flex-row ">Short Url : <a class="underline" href="locahost:3000/<%= shortUrl %>" target="_blank">
+        <p class="m-1 p-3 flex gap-3 flex-col md:flex-row ">Short Url : <a class="underline" href="localhost:3000/<%= shortUrl %>" target="_blank">
           locahost:3000/<%= shortUrl %>
         </a>
         <button id="btn" class="m-2 md:m-1 md:ml-4 px-4 py-1 w-28 bg-blue-500 border-none rounded-md" onclick="copy(`<%= shortUrl %>`)">Copy</button>

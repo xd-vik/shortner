@@ -4,11 +4,13 @@
   "description": "Link shortner ",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "tailwind:css": "postcss public/styles/tail.css -o public/styles/style.css"
   },
   "author": "vik",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "mongoose": "^8.3.2",

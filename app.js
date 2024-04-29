@@ -3,10 +3,11 @@ const app = express();
 const path = require('path')
 const Url = require('./models/link')
 const shortid = require("shortid");
+require("dotenv").config();
 
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://vikdev:djt3m66Xqc3ElA8m@shortner.tsdvhkk.mongodb.net/?retryWrites=true&w=majority&appName=shortner")
+mongoose.connect(process.env.MONGO_DATA)
 .then(() => console.log("Mongodb Connected"))
 .catch((error) => console.log(error));
 
@@ -47,5 +48,5 @@ app.get("/:shortCode", async (req,res)=>{
 
 });
 
-app.listen(3000);
+app.listen(process.env.PORT);
 
