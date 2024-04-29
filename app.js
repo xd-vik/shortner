@@ -25,12 +25,8 @@ app.post('/long',  async (req, res) => {
     const longUrl = req.body.longlink;
     const shortCode = shortid.generate();
     const shortUrl = shortCode;
-  
-  
     const newUrl = new Url({ shortUrl, longUrl });
     await newUrl.save();
-  
-    console.log("url short successfully..",newUrl)
   
     res.render("index", { shortUrl });
   });
